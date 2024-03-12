@@ -10,6 +10,9 @@ function Tasklist() {
     }
 
     const handleSubmit = ()=>{
+        if(submit==""){
+            return alert("You can not add a blank task.")
+        }
         setData([...data,submit]);
         setSubmit("");
     }
@@ -22,13 +25,19 @@ function Tasklist() {
     };
 
     return (
-        <div>
-            <input type="text" value={submit} onChange={handleInput} />
-            <button onClick={handleSubmit}>Submit</button>
+        <>
+        <h1>TO DO LIST</h1>
+        <div className="maincontainer">
+            <div className="taskdesc">
+                <span className="headingtaskdesc">Task Description</span>
+                <input className="taskdescinput" type="text" value={submit} onChange={handleInput} placeholder="Enter you task here" />
+                <button className="addtask" onClick={handleSubmit}>Add Task</button>
+            </div>
             {data.map((tasklist, index) => {
-            return <Task key={index} taskdesc={tasklist} onDelete={() => handleDelete(index)}/>;
+            return <Task key={index} taskdesc={tasklist} taskno={index+1} onDelete={() => handleDelete(index)}/>;
       })}
         </div>
+        </>
      );
 };
 

@@ -6,26 +6,67 @@
 }
 .pending{
     background-color: red;
+    color: white;
 }
-.container{
+.maincontainer{
     border: 3px solid black;
-    margin: 10px;
-    border-radius: 10px;
-}
-h1{
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
+}
+h1{
+    margin: 5px;
+    text-align: center;
 }
 p{
     margin: 10px;
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 10px;
 }
 .mainheading{
     text-align: center;
     margin: 20px 0px;
     background-color: black;
     color: white;
+}
+.taskdesc{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    margin: 0px 10px;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+.taskdescinput{
+    margin: 0px 10px;
+    padding: 5px;
+    width: 50%;
+}
+.headingtaskdesc{
+    font-size: 25px;
+    font-weight: bold;
+}
+.addtask{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+.deletebtn{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.lrmargin{
+    margin: 0px 10px;
+}
+.taskno{
+    margin-right: 20px;
 }

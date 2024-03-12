@@ -19,12 +19,12 @@ const Task = (props) => {
     };
 
     return (
-        <div className="container">
-            <h1 className={`${status ? "done" : "pending"}`}>{defstatus}</h1>
-            <p>{props.taskdesc} <input type="checkbox" onChange={handleChange}></input>
-            <button onClick={props.onDelete}>Delete</button></p>
+        <div>
+            <h2 className={`${status ? "done" : "pending"}`}></h2>
+            <p className={`${status ? "done" : "pending"}`}><span className="taskno">Task # {props.taskno}: </span>{props.taskdesc} <input className="lrmargin" type="checkbox" onChange={handleChange}></input><span>{defstatus}</span>
+            <button className="deletebtn lrmargin" onClick={props.onDelete}>Delete</button></p>
         </div>
-    );
+    );//
 }
 
 export default Task;
