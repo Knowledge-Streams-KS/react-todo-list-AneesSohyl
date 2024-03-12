@@ -21,7 +21,7 @@ const Task = (props) => {
     return (
         <div>
             <h2 className={`${status ? "done" : "pending"}`}></h2>
-            <p className={`${status ? "done" : "pending"}`}><span className="taskno">Task # {props.taskno}: </span>{props.taskdesc} <input className="lrmargin" type="checkbox" onChange={handleChange}></input><span>{defstatus}</span>
+            <p className={`${status ? "done" : "pending"}`}><span className="taskno">Task # {props.taskno}: </span><span className="descwidth">{props.taskdesc}</span><input className="lrmargin" type="checkbox" onChange={handleChange}></input><span>{defstatus}</span>
             <button className="deletebtn lrmargin" onClick={props.onDelete}>Delete</button></p>
         </div>
     );//
