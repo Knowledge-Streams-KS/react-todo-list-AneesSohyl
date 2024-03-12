@@ -70,3 +70,7 @@ p{
 .taskno{
     margin-right: 20px;
 }
+.descwidth{
+    width: 100%; 
+    word-wrap: break-word;
+}
